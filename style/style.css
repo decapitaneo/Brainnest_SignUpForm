@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.background_img {
+    width: 40%;
+    height: 100vh;
+    background-image: url('../images/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.logo_slogan {
+    width: 100%;
+    margin-top: 12rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgba(76, 139, 175, 0.3)
+}
+
+
+.logo_slogan h1 {
+    color: #FCA311;
+    padding-left: 1rem;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.principal {
+    width: 60%;
+    background: radial-gradient(#000, #4695bd);
+    padding-top: 2rem;
+}
+
+.principal span {
+    font-style: italic;
+}
+
+.principal_p {
+    padding-left: 3rem;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    color: #ddd;
+}
+
+.principal_p p:first-child {
+    padding-bottom: 1.3rem;
+}
+
+.principal_form {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    background-color: white;
+    margin-top:3rem ;
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px 17px rgb(53, 52, 52);
+}
+
+.principal_form p {
+    font-size: 1.2rem;
+}
+
+.user {
+    justify-content: center;
+    align-items: center;
+    margin-right:  4rem;
+    margin-bottom: 2rem;
+}
+
+.user .user_box {
+    padding-top: 2.4rem;
+}
+
+.user_box input {
+    height: 2rem;
+    width: 20rem;
+    box-shadow: 0.6px 0.6px #ddd;
+    border: rgb(248, 243, 243)  solid 0.6px;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+}
+
+.principal_button_p {
+    margin-left: 3rem;   
+}
+
+.principal_button_p p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.principal_button_p span {
+    color:#ddd
+}
+
+button {
+    padding: 1rem 3.2rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #ddd;
+    font-weight: bold;
+    background-color: #FCA311;
+    border: none;
+    box-shadow: #FCA311;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+}
+
+.user_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_box p {
+    color: red;
+    padding-left: 0.3rem;
+    font-size: 0.9rem;
+}
