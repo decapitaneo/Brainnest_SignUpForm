@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-  }
+}
 
 main {
     width: 100%;
@@ -73,15 +73,21 @@ main {
 
 .principal_form {
     padding-top: 1rem;
-    padding-left: 3rem;
     background-color: white;
     margin-top:3rem ;
     margin-bottom: 2rem;
-    box-shadow: 5px 5px 17px rgb(53, 52, 52);
 }
 
-.principal_form p {
+.principal_form p:first-child {
     font-size: 1.2rem;
+    padding-left: 3rem;
+}
+
+.user_main {
+    display: flex;
+    flex-direction: row;
+    padding-left: 3rem;
+    box-shadow: 3px 3px rgb(53, 52, 52);
 }
 
 .user {
@@ -92,7 +98,7 @@ main {
 }
 
 .user .user_box {
-    padding-top: 2.4rem;
+    padding-top: 2.5rem;
 }
 
 .user_box input {
@@ -105,16 +111,20 @@ main {
 }
 
 .principal_button_p {
-    margin-left: 3rem;   
+    padding-top: 2rem;
+    padding-left: 3rem;
+    background: radial-gradient(#000, #4695bd);
+    height: 36vh;
 }
 
 .principal_button_p p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 1rem;
+    color: #ddd;
 }
 
 .principal_button_p span {
-    color:#ddd
+    color:#FCA311
 }
 
 button {
@@ -122,7 +132,6 @@ button {
     border-radius: 5px;
     font-size: 1.5rem;
     color: #ddd;
-    font-weight: bold;
     background-color: #FCA311;
     border: none;
     box-shadow: #FCA311;
@@ -133,7 +142,7 @@ button {
 
 .form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .user_box {

@@ -12,7 +12,6 @@ function validateEmail(email) {
     return false
 }
 
-
 function validate() {
 
     let isValid = false
@@ -20,7 +19,10 @@ function validate() {
     if (myForm.email.value == "") {
         alert("Provide a valid email address!")
         document.myForm.email.focus()
-    } else if (myForm.password.value == "") {
+    } else if (validateEmail(myForm.email.value) !== true){
+        alert("Provide a valid email address!")
+        document.myForm.email.focus()
+    }else if (myForm.password.value == "") {
         alert("Provide a valid password!")
         document.myForm.password.focus()
     } else if (myForm.confirm_password.value !== myForm.password.value) {
@@ -43,16 +45,11 @@ function validate() {
     return isValid
 }
 
-function validatePassword(){
-    
-    
-}
-
 form.addEventListener("submit", evento=>{
     let isValid = validate()
     if(isValid == true) {
-        alert('Dados cadastrados com sucesso!')   
+        alert('Data successfully registered');  
     }else{
-        evento.preventDefault()
+        evento.preventDefault();
     }
 });

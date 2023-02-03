@@ -30,44 +30,45 @@
         </div>
         <div class="principal_form">
             <p>Let´s do this!</p>
-            <form action="" class="form" method="post" name="myForm">
-                <div class="user">
-                    <div class="user_box">
-                        <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name">
+            <form action="http://httpbin.org/post" class="form" method="post" name="myForm">
+                <div class="user_main">
+                    <div class="user">
+                        <div class="user_box">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" name="first_name" id="first_name">
+                        </div>
+                        <div class="user_box">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="user_box">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password">
+                            <p id="message"></p>
+                        </div>
                     </div>
-                    <div class="user_box">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email">
-                    </div>
-                    <div class="user_box">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password">
-                        <p id="message"></p>
-                    </div>
+                    <div class="user">
+                        <div class="user_box">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" name="last_name" id="last_name">
+                        </div>
+                        <div class="user_box">
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="phone" name="phone_number" id="phone_number">
+                        </div>
+                        <div class="user_box">
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password here">
+                        </div>
+                    </div> 
+                </div> 
+                <div class="principal_button_p">
+                    <button type="submit" id="submit"> Create Account</button>
+                    <p>Already have an account? <span>Log in</span></p>  
                 </div>
-                <div class="user">
-                    <div class="user_box">
-                        <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name">
-                    </div>
-                    <div class="user_box">
-                        <label for="phone_number">PHONE NUMBER</label>
-                        <input type="phone" id="phone_number">
-                    </div>
-                    <div class="user_box">
-                        <label for="confirm_password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm_password" placeholder="Confirm password here">
-                    </div>
-                </div>    
-            </form>
-            
+            </form>    
         </div>
-        <div class="principal_button_p">
-            <button type="submit" onclick="validate()" id="submit"> Create Account</button>
-            <p>Already have an account? <span>Log in</span></p>
-            
-        </div>
+        
         
     </div>
 </main>
