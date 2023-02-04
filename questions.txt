@@ -270,3 +270,8 @@ maximum value that is calculated in real-time?
 76.What attribute of repeat() can be used to fill in as many grid tracks as possible, given certain constraints?
 
 77.What is the difference between auto-fit and auto-fill?
+
+# caracter validation for name and last_name
+#box shadow and border solid to each input
+# mark the field that you consider mandatory(adicional message)
+#try small pop up windows to tell the user what you want

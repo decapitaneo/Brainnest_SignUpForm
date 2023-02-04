@@ -4,9 +4,17 @@ const confirm_password = document.getElementById("confirm_password");
 const email = document.getElementById("email");
 const button = document.getElementById("submit");
 let mensagem = document.getElementById("message");
+let phone = document.getElementById("phone_number")
 
 function validateEmail(email) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+        return true
+    }
+    return false
+}
+
+function validatePhone(phone){
+    if (/^(\(?\d{2}\)?\s?)?(\d{4,5}\-?\d{4})$/.test(phone)){
         return true
     }
     return false
@@ -25,6 +33,12 @@ function validate() {
     }else if (myForm.password.value == "") {
         alert("Provide a valid password!")
         document.myForm.password.focus()
+    } else if (myForm.phone_number.value == "") {
+        alert("Provide a valid phone number")
+        document.myForm.phone.focus()
+    }else if(!validatePhone(myForm.phone_number.value)){
+        alert("Provide a valid phone number!")
+        document.myForm.phone_number.focus()   
     } else if (myForm.confirm_password.value !== myForm.password.value) {
         mensagem.textContent = "* Passwords do not match."
         password.style.border = "0.6px solid red";
