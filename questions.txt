@@ -250,6 +250,8 @@ typing each one out?
 
 70.What is the difference between a static and dynamic size value?
 
+testing
+
 71.How can you assign a grid track a flexible value that changes depending on
 the remaining space available in the grid?
 
