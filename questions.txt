@@ -1,0 +1,270 @@
+1. Why should you use Emmet?
+    Emmet is a free add-on for your text editor. It allows you to type shortcuts that are then expanded into full pieces of code. By using Emmet, developers type less, they save both on keystrokes and time. Also relying on Emmet's auto completion means fewer typos and missing tags, leading to more robust and valid files.
+
+2. What are some useful Emmet abbreviations?
+    . container (. className) : ...
+    #container (#idName) : This will make a div with the id of container.
+    . header>ul>li*4 : This will make a div with a class of header and then nest a ul tag which will consist of 4 li tags.
+    . main>. top+. ...
+    . header>(div.links>a{Google})+.footer :
+    
+3. What syntax would you use to create this element <p class="text"></p>?
+    p.text
+
+4. What syntax expands to an element with a child element inside of it? For
+example: <div><p></p></div>
+    div>p
+    
+
+5. What syntax would you use to create three elements that have the same
+class name?
+    .txt*3
+
+6. What is the xmlns attribute?
+    The xmlns attribute specifies the xml namespace for a document. Note: The xmlns attribute is required in XHTML, invalid in HTML 4.01, and optional in HTML5. Note: The HTML validator at http://w3.org does not complain when the xmlns attribute is missing in an XHTML document.
+    
+7. What are some situations where you wouldn’t want to use SVG?
+    The number one case of where to avoid is presentational monochrome images such as flat icons. Webfonts can be cached, the two modern formats of WOFF and WOFF2 compress much smaller than gzipping minified SVG does by the very nature of their storing things like numbers in binary instead of as text, etc, etm.
+    
+8. What are the benefits of “inlining” your SVGs? What are the drawbacks?
+    Inlining SVGs allows you to unlock their full potential, but it also comes with some serious drawbacks: it makes your code harder to read, makes your page less cacheable, and if it’s a large SVG it might delay the rest of your HTML from loading.
+    Some of the drawbacks of inlining SVG code can be avoided once you’ve learned a front-end JavaScript library like React, or a build-tool like webpack. We aren’t quite ready to get into those yet, so just keep that in the back of your mind.
+    
+9. What is a table?
+    HTML tables allow web developers to arrange data into rows and columns.
+    
+10.Why is it a bad idea to use HTML Tables for page layout?
+    The biggest disadvantage to tables is that they are not very responsive when displayed on mobile devices. Depending on the size of your table and size of the screen, your data may end up either very squished together or extend beyond the width of the screen.
+
+11.What are caption elements useful for?
+    Each table may have an associated caption (see the CAPTION element) that provides a short description of the table's purpose.
+    
+12.What is the scope attribute?
+    The scope attribute specifies whether a header cell is a header for a column, row, or group of columns or rows.
+
+13.Explain what the form element is for and what two attributes it should
+always include.
+    The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc. 
+    The action attribute points to the back-end of our web page, which handles the form submission. The method attribute is used to upload the data. The most commonly used attributes are the GET and POST methods
+
+14.Explain what form controls are at a high level.
+    A form is a component of a Web page that has form controls, such as text fields, buttons, checkboxes, range controls, or color pickers. A user can interact with such a form, providing data that can then be sent to the server for further processing (e.g., returning the results of a search or calculation).
+
+15.What is the name attribute for?
+    The name attribute specifies the name of a form. The name attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted.
+
+16.What are the three most common form controls you can use for allowing
+users to select predefined options?
+    checkboxes, radio buttons and dropdown list
+
+17.What are the three types of buttons in HTML?
+    button, submit, reset
+
+18.What are the two most challenging aspects of styling forms?
+    Having internals can't be styled in CSS alone
+    <input type="color">
+    Date-related controls such as <input type="datetime-local">
+    <input type="range">
+    <input type="file">
+    Elements involved in creating dropdown widgets, including <select>, <option>, <optgroup> and <datalist>.
+    <progress> and <meter>
+    For example, the date picker calendar, and the button on <select> that displays an options list when clicked, can't be styled using CSS alone.
+    
+19.What does the required validation do?
+    We will often want to ensure specific fields have been filled in before submitting the form, for example, the email and password in a login form
+    
+20.What validations can you use for checking text length?
+    To add the minimum length validation, we give the form control a minlength attribute with an integer value that represents the minimum amount of characters we want to allow in the form control. Opposite of that is the maximum length validation, To add it, we give the form control a maxlength attribute with an integer value which represents the maximum amount of characters we want to allow in the form control.
+
+21.How can you validate the minimum and maximum of numeric inputs? 
+    We can do this with the min and max attributes, which allows us to set the lower and upper bounds of the value entered into the form control. The min and max attributes only work with number-based form controls such as the number, dates and time inputs. Some real-world use cases for using these validations would be limiting the quantity on a product order form or choosing the number of passengers on a flight booking form.
+
+22.What can you use the pattern validation for?
+    To ensure we get the correct information from users, we will often want to ensure data matches a particular pattern. Real-world applications would be checking if a credit card number or a zipcode is in the correct format. To add a pattern validation, we give the form control a pattern attribute with a regular expression as the value. We can add a more descriptive validation message by giving our input a title attribute. It is also good practice to use a placeholder attribute to show users an example of the expected pattern they need to enter.
+    
+23.What pseudo CSS selectors are available for styling valid and invalid inputs? 
+    We can use the :required , :optional , :valid and :invalid pseudo-classes coupled with HTML5 form validation attributes like required or pattern to create very visually engaging results. These pseudo-classes work for input , textarea and select elements.
+
+24.Why would you want to use a CSS reset?
+    The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on.
+
+25.Why would you want to use em or rem for font-size instead of px? 
+    Unlike PX, relative units like %, EM, and REM are better suited to responsive design and also help meet accessibility standards. Relative units scale better on different devices because they can scale up and down according to another element's size. 
+
+26.What are some instances where you might want to use vh and vw?
+    VW is useful for creating full width elements (100%) that fill up the entire viewport's width. Of course, you can use any percentage of the viewport's width to achieve other goals, such as 50% for half the width, etc. VH is useful for creating full height elements (100%) that fill up the entire viewport's height.
+
+27.What are some instances where you might want to use px instead of a relative unit?
+    Images, for example, will (by default) be scaled such that each pixel is 1px in size, so if you are designing around an image you'll need px units. It is also very useful for precise font sizing, and for border widths, where due to rounding it makes the most sense to use px units for the majority of screens.
+
+28.What are the 2 ways to add fonts that are not installed on a user’s computer?
+
+29.What is the ‘system font stack’ and why would you want to use it?    
+    A font stack is a list of fonts and font keywords used to let a browser know our preferred and fallback fonts.
+
+30.Which property would you use to increase or decrease the space between
+letters in a word?
+    letter spacing
+
+31.Which property would you use to increase or decrease the space between
+lines in a paragraph?
+    line height
+
+32.Which property would you use to make an element transparent? 
+    opacity
+    
+33.Which property would you use to make a background image tile? 
+    background-repeat:repeat
+
+34.Which property would you use to add scrollbars to an element?
+    overflow: scroll;
+    
+35.Which property would you use to add a shadow behind an element? 
+    box-shadow : 
+
+36.Which property would you use to create rounded corners on an element? 
+    border-radius
+
+37.How would you use border-radius to make a circular element?
+    border-radius: 50%;
+
+38.What is the difference between the child combinator and the descendant
+combinator?
+    The descendant combinator matches a child, grandchild, and so on. The child combinator selects elements that are direct children of another element. You use the greater than symbol (>) between selectors to specify that one selector is a direct child of the other.
+
+39.How does the syntax of pseudo-classes and pseudo-elements differ? 
+    A pseudo-class consists of a colon ( : ) followed by the pseudo-class name (e.g., :hover ).
+    pseudo-element -->::first-line
+    Pseudo-classes enable you to target an element when it's in a particular state, as if you had added a class for that state to the DOM. Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that.
+
+40.Do pseudo-classes exist somewhere in HTML? Do pseudo-elements? 
+    Pseudo-class selectors are prefixed with a single colon and are a different way to target elements that already exist in HTML. Pseudo-elements are prefixed with two colons and are used to target elements that don't normally exist in the markup.
+    
+41.Name two ways you could select every second child of an element, starting
+with the first.
+    .div:nth-child(2n) .play{
+    }
+
+
+42.What is the difference between div:first-child and div:last-child? What will
+each select?
+    div:first-child -will get the first element
+    div:last-child - will get the last element
+    
+43.What selector would you use to style a button a user is currently hovering
+over?  :hover selector
+    How about one that is currently being clicked on?
+        onclick event
+
+44.How could you select all input elements with a type of text?
+    HTMLInputElement.select()
+
+45.How could you select all classes that begin with thunder?
+    [attribute^="value"] - ^= Will match strings from the start.
+
+
+46.What is the difference between static and relative positioning?
+    Static - this is the default value, all elements are in order as they appear in the document. 
+    Relative - the element is positioned relative to its normal position. 
+    Absolute - the element is positioned absolutely to its first positioned parent.
+
+47.What is absolute positioning useful for?
+    This is a very powerful type of positioning that allows you to literally place any page element exactly where you want it. You use the positioning attributes top , left , bottom , and right to set the location.
+
+48.What is the difference between fixed and sticky positioning?
+    The difference between position fixed vs sticky is that fixed always positions an element relative to the viewport, while sticky behaves like a regular element until it reaches the defined offset and then becomes fixed.
+
+49.What are the four CSS math functions we covered above?
+    calc(), clamp(), min(), max()
+
+50.How do we use CSS math functions in our CSS?    
+    CSS has five math functions that allow you to perform basic arithmetic operations—addition, subtraction, multiplication, comparison, and division on CSS numeric units such as numbers (for example, 10, 0.8, -6), lengths ( px , rem , vw ), and percentages (50%), with the ability to interpolate between these units.
+
+51.How can CSS functions help make websites and applications more
+responsive?
+    CSS has five math functions that allow you to perform basic arithmetic operations—addition, subtraction, multiplication, comparison, and division on CSS numeric units such as numbers (for example, 10, 0.8, -6), lengths ( px , rem , vw ), and percentages (50%), with the ability to interpolate between these units.
+
+52.How would you declare a custom property with a name of text-color?
+    --text-color: black;
+
+53.How would you access a custom property with a name of background-color?
+    background-color: var(--text-color);
+    
+54.Where would you declare a custom property to have its scope be global and accessible by all other selectors?
+
+55.Where would you declare a custom property so that a user’s theme setting from their OS or browser was taken into account?
+
+56. How can you use Flex to make a two-dimensional layout?
+    Flexbox is made for when you want to lay a collection of items out in one dimension layouts and Grid is made for two-dimensional layout — rows, 
+    
+57.Why was CSS Grid introduced?
+
+58.Which CSS layout module would you use to easily make equal sized items
+in a container? 
+    Grid
+
+59.How does an HTML element become a grid item?
+    display: grid;
+    
+60.What is the space between lines on the grid?
+    gap
+
+61.How do you set gutters (also known as alleys) in the grid?
+    Gutters or alleys are spacing between content tracks. These can be created in CSS Grid Layout using the column-gap, row-gap, or gap properties.
+
+62.Describe what happens when you have more content than defined tracks. 
+    The tracks themselves will grow and shrink,
+
+63.How could you change the size for those undefined tracks?
+
+64.Explain the difference between a track and a line.
+    A grid track is the space between two adjacent grid lines. They are defined in the explicit grid by using the grid-template-columns and grid-template-rows properties or the shorthand grid or grid-template properties. Tracks are also created in the implicit grid by positioning a grid item outside of the tracks created in the explicit grid.
+
+65.What is the smallest unit on a grid?
+    The smallest unit of a grid is a grid cell, which is bordered by four adjacent grid lines with no grid lines running through it. A grid area is a rectangular area made up of one or more adjacent grid cells.
+
+66.What kind of value do we give to the grid-column-start or grid-column-end
+properties?
+    grid-column-start = 1;
+    grid-column-start = 4;
+    
+
+67.Which property can we use to combine all the start and end values for a
+grid item?
+    grid-template-areas: "a a a"
+                        "b b b"
+                        "c c c"
+
+68.Which grid container property can map out a visual structure of grid items? 
+
+69.How do you create several grid tracks of the same size without manually
+typing each one out?
+    grid-template-areas:
+                    "head head"
+                    "nav  main"
+                    "nav  foot";
+    #page > header {
+                    grid-area: head;
+                    background-color: #8ca0ff;
+    }
+
+70.What is the difference between a static and dynamic size value?
+
+71.How can you assign a grid track a flexible value that changes depending on
+the remaining space available in the grid?
+
+72.How can you assign grid tracks an uneven distribution of the remaining
+space in a grid?
+
+73.Which CSS functions will return the smallest or largest value supplied to
+them?
+
+74.Which CSS Grid-only function allows you to supply a minimum and
+maximum track size that is calculated in real-time?
+
+75.Which global CSS function allows you to supply a minimum, ideal, and
+maximum value that is calculated in real-time?
+
+76.What attribute of repeat() can be used to fill in as many grid tracks as possible, given certain constraints?
+
+77.What is the difference between auto-fit and auto-fill?
